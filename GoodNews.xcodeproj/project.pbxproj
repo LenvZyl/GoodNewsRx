@@ -19,6 +19,10 @@
 		A2F57B82269996B80056EB72 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F57B81269996B80056EB72 /* Login.storyboard */; };
 		A2F57B842699974D0056EB72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B832699974D0056EB72 /* LoginViewController.swift */; };
 		A2F57B8A2699E9940056EB72 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B892699E9940056EB72 /* LoginViewModel.swift */; };
+		A2F57B8C2699FA8F0056EB72 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B8B2699FA8F0056EB72 /* Article.swift */; };
+		A2F57B8E2699FA990056EB72 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B8D2699FA990056EB72 /* ArticleList.swift */; };
+		A2F57B90269A1A1D0056EB72 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B8F269A1A1D0056EB72 /* NewsTableViewCell.swift */; };
+		A2F57B98269A21350056EB72 /* Api+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B97269A21350056EB72 /* Api+Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		A2F57B81269996B80056EB72 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A2F57B832699974D0056EB72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A2F57B892699E9940056EB72 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A2F57B8B2699FA8F0056EB72 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		A2F57B8D2699FA990056EB72 /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
+		A2F57B8F269A1A1D0056EB72 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		A2F57B97269A21350056EB72 /* Api+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api+Extention.swift"; sourceTree = "<group>"; };
 		D9C87DB201CB321313C91952 /* Pods-GoodNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodNews.debug.xcconfig"; path = "Target Support Files/Pods-GoodNews/Pods-GoodNews.debug.xcconfig"; sourceTree = "<group>"; };
 		EE96C10EC40E2C110FFA3017 /* Pods_GoodNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -112,15 +120,15 @@
 		A2F57B4E269994BF0056EB72 /* GoodNews */ = {
 			isa = PBXGroup;
 			children = (
-				A2F57B4F269994BF0056EB72 /* AppDelegate.swift */,
-				A2F57B7F269994FD0056EB72 /* Commons.swift */,
-				A2F57B51269994BF0056EB72 /* SceneDelegate.swift */,
-				A2F57B53269994BF0056EB72 /* ViewController.swift */,
-				A2F57B832699974D0056EB72 /* LoginViewController.swift */,
-				A2F57B892699E9940056EB72 /* LoginViewModel.swift */,
-				A2F57B81269996B80056EB72 /* Login.storyboard */,
+				A2F57B96269A20C70056EB72 /* App */,
+				A2F57B94269A20A60056EB72 /* ViewControllers */,
+				A2F57B91269A20670056EB72 /* Models */,
+				A2F57B92269A20750056EB72 /* ViewModels */,
+				A2F57B93269A20970056EB72 /* ViewClasses */,
+				A2F57B95269A20B30056EB72 /* StoryBoards */,
 				A2F57B58269994C30056EB72 /* Assets.xcassets */,
 				A2F57B5A269994C30056EB72 /* LaunchScreen.storyboard */,
+				A2F57B97269A21350056EB72 /* Api+Extention.swift */,
 				A2F57B5D269994C30056EB72 /* Info.plist */,
 			);
 			path = GoodNews;
@@ -142,6 +150,58 @@
 				A2F57B73269994C40056EB72 /* Info.plist */,
 			);
 			path = GoodNewsUITests;
+			sourceTree = "<group>";
+		};
+		A2F57B91269A20670056EB72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2F57B8B2699FA8F0056EB72 /* Article.swift */,
+				A2F57B8D2699FA990056EB72 /* ArticleList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2F57B92269A20750056EB72 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A2F57B892699E9940056EB72 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A2F57B93269A20970056EB72 /* ViewClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A2F57B8F269A1A1D0056EB72 /* NewsTableViewCell.swift */,
+			);
+			path = ViewClasses;
+			sourceTree = "<group>";
+		};
+		A2F57B94269A20A60056EB72 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2F57B53269994BF0056EB72 /* ViewController.swift */,
+				A2F57B832699974D0056EB72 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A2F57B95269A20B30056EB72 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				A2F57B81269996B80056EB72 /* Login.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		A2F57B96269A20C70056EB72 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A2F57B4F269994BF0056EB72 /* AppDelegate.swift */,
+				A2F57B7F269994FD0056EB72 /* Commons.swift */,
+				A2F57B51269994BF0056EB72 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		B55D53D495A445020B4DFD63 /* Frameworks */ = {
@@ -335,12 +395,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2F57B8C2699FA8F0056EB72 /* Article.swift in Sources */,
 				A2F57B80269994FD0056EB72 /* Commons.swift in Sources */,
 				A2F57B54269994BF0056EB72 /* ViewController.swift in Sources */,
 				A2F57B8A2699E9940056EB72 /* LoginViewModel.swift in Sources */,
+				A2F57B8E2699FA990056EB72 /* ArticleList.swift in Sources */,
 				A2F57B50269994BF0056EB72 /* AppDelegate.swift in Sources */,
 				A2F57B842699974D0056EB72 /* LoginViewController.swift in Sources */,
+				A2F57B98269A21350056EB72 /* Api+Extention.swift in Sources */,
 				A2F57B52269994BF0056EB72 /* SceneDelegate.swift in Sources */,
+				A2F57B90269A1A1D0056EB72 /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
