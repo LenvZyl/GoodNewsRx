@@ -18,6 +18,7 @@
 		A2F57B80269994FD0056EB72 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B7F269994FD0056EB72 /* Commons.swift */; };
 		A2F57B82269996B80056EB72 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F57B81269996B80056EB72 /* Login.storyboard */; };
 		A2F57B842699974D0056EB72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B832699974D0056EB72 /* LoginViewController.swift */; };
+		A2F57B8A2699E9940056EB72 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F57B892699E9940056EB72 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A2F57B7F269994FD0056EB72 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
 		A2F57B81269996B80056EB72 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		A2F57B832699974D0056EB72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A2F57B892699E9940056EB72 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		D9C87DB201CB321313C91952 /* Pods-GoodNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodNews.debug.xcconfig"; path = "Target Support Files/Pods-GoodNews/Pods-GoodNews.debug.xcconfig"; sourceTree = "<group>"; };
 		EE96C10EC40E2C110FFA3017 /* Pods_GoodNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,6 +117,7 @@
 				A2F57B51269994BF0056EB72 /* SceneDelegate.swift */,
 				A2F57B53269994BF0056EB72 /* ViewController.swift */,
 				A2F57B832699974D0056EB72 /* LoginViewController.swift */,
+				A2F57B892699E9940056EB72 /* LoginViewModel.swift */,
 				A2F57B81269996B80056EB72 /* Login.storyboard */,
 				A2F57B58269994C30056EB72 /* Assets.xcassets */,
 				A2F57B5A269994C30056EB72 /* LaunchScreen.storyboard */,
@@ -334,6 +337,7 @@
 			files = (
 				A2F57B80269994FD0056EB72 /* Commons.swift in Sources */,
 				A2F57B54269994BF0056EB72 /* ViewController.swift in Sources */,
+				A2F57B8A2699E9940056EB72 /* LoginViewModel.swift in Sources */,
 				A2F57B50269994BF0056EB72 /* AppDelegate.swift in Sources */,
 				A2F57B842699974D0056EB72 /* LoginViewController.swift in Sources */,
 				A2F57B52269994BF0056EB72 /* SceneDelegate.swift in Sources */,
