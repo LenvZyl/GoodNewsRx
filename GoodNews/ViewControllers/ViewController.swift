@@ -12,9 +12,8 @@ import RxCocoa
 class ViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
-    private var articles: [Article] = []
+    private var articleList: [Article] = []
     @IBOutlet weak var tableView: UITableView!
-    var ten = 10
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -26,18 +25,11 @@ class ViewController: UIViewController {
     }
     
     private func getNews(){
-        let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + Commons.apiKey)!
-        Observable.just(url).flatMap{ url -> Observable<Data> in
-            let request = URLRequest(url: url)
-            return URLSession.shared.rx.data(request: request)
-        }.map { data -> [Article]? in
-            let articles = try? JSONDecoder().decode(ArticleList.self, from: data).articles
-            return articles
-        }.subscribe(onNext: { articles in
-            if let articles = articles{
-                self.articles = articles
+        URLRequest.load(resource: ArticleList.all).subscribe(onNext: { [weak self] result in
+            if let result = result  {
+                self?.articleList = result.articles
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self?.tableView.reloadData()
                 }
             }
         }).disposed(by: disposeBag)
@@ -48,15 +40,15 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return articles.count
+        return articleList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as? NewsTableViewCell else {
             fatalError("Table View Cell not found")
         }
-        cell.titleLabel.text = articles[indexPath.row].title
-        cell.descriptionLabel.text = articles[indexPath.row].description
+        cell.titleLabel.text = articleList[indexPath.row].title
+        cell.descriptionLabel.text = articleList[indexPath.row].description
         cell.descriptionLabel.textColor = .gray.withAlphaComponent(0.5)
         return cell
     }

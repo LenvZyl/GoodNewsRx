@@ -86,37 +86,36 @@
                                 <rect key="frame" x="10" y="98" width="394" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="93" id="8LR-cT-38H" customClass="NewsTableViewCell" customModule="GoodNews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="394" height="93"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" id="8LR-cT-38H" customClass="NewsTableViewCell" customModule="GoodNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="394" height="84.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8LR-cT-38H" id="BBe-Km-0eq">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="93"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="84.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOD-PX-xpg">
-                                                    <rect key="frame" x="20" y="19" width="354" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="00S-dQ-NeR"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UQ-74-Mmp">
-                                                    <rect key="frame" x="20" y="60" width="354" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="h6w-jM-cLP">
+                                                    <rect key="frame" x="20" y="11" width="354" height="62.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOD-PX-xpg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UQ-74-Mmp">
+                                                            <rect key="frame" x="0.0" y="49" width="354" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="jOD-PX-xpg" firstAttribute="leading" secondItem="BBe-Km-0eq" secondAttribute="leadingMargin" id="ReP-LP-H8R"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="8UQ-74-Mmp" secondAttribute="trailing" id="WBm-pr-7ft"/>
-                                                <constraint firstItem="8UQ-74-Mmp" firstAttribute="bottom" secondItem="BBe-Km-0eq" secondAttribute="bottomMargin" id="XqL-aU-Ec2"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jOD-PX-xpg" secondAttribute="trailing" id="YUo-8c-geB"/>
-                                                <constraint firstItem="8UQ-74-Mmp" firstAttribute="leading" secondItem="BBe-Km-0eq" secondAttribute="leadingMargin" id="bII-bh-gdR"/>
-                                                <constraint firstItem="jOD-PX-xpg" firstAttribute="top" secondItem="BBe-Km-0eq" secondAttribute="topMargin" constant="8" id="kbN-He-VI9"/>
-                                                <constraint firstItem="8UQ-74-Mmp" firstAttribute="top" secondItem="jOD-PX-xpg" secondAttribute="bottom" constant="20" id="t9c-kL-qqq"/>
+                                                <constraint firstItem="h6w-jM-cLP" firstAttribute="top" secondItem="BBe-Km-0eq" secondAttribute="topMargin" id="Mx5-Gt-yNx"/>
+                                                <constraint firstItem="h6w-jM-cLP" firstAttribute="leading" secondItem="BBe-Km-0eq" secondAttribute="leadingMargin" id="XOL-Re-G4g"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="h6w-jM-cLP" secondAttribute="bottom" id="qaX-3a-b1m"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="h6w-jM-cLP" secondAttribute="trailing" id="xLe-4N-AkV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
